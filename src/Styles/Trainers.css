@@ -1,0 +1,250 @@
+/* Root Variables for Consistent Styling */
+:root {
+  --primary-color: #FFD700; /* Bright Yellow */
+  --secondary-color: #111; /* Deep Black */
+  --text-color: #fff; /* White Text */
+  --card-bg: #222; /* Dark Grey for Cards */
+  --border-radius: 12px;
+  --shadow-light: 0 5px 15px rgba(255, 215, 0, 0.3);
+  --shadow-hover: 0 10px 20px rgba(255, 215, 0, 0.5);
+  --transition: all 0.3s ease-in-out;
+}
+
+/* General Page Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🚀 Carousel Container */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1100px;
+  overflow: hidden;
+  position: relative;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+
+/* 🔄 Carousel Buttons */
+.carousel button {
+  background: var(--primary-color);
+  border: none;
+  color: var(--secondary-color);
+  font-size: 2rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-light);
+}
+
+.carousel button:hover {
+  background: #e6c300;
+  transform: scale(1.2);
+}
+
+/* 🔥 Trainers Wrapper */
+.trainers-wrapper {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease-in-out;
+  padding: 1rem;
+}
+
+/* 🎖 Trainer Card */
+.trainer-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+  transition: var(--transition);
+  max-width: 350px;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 1.8rem;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+}
+
+.trainer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* 🏆 Trainer Image */
+.trainer-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+/* 🏋️ Trainer Details */
+.trainer-card h2 {
+  font-size: 1.7rem;
+  color: var(--primary-color);
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.trainer-card p {
+  font-size: 1rem;
+  color: #bbb;
+  margin: 0.7rem 0;
+}
+
+/* 🔗 Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: var(--transition);
+  opacity: 0.9;
+  filter: invert(100%);
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* 📌 Filter Categories */
+.trainer-categories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.trainer-categories button {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.trainer-categories button:hover {
+  background: #e6c300;
+  transform: scale(1.1);
+}
+
+/* 🏅 Compare Trainers Table */
+.trainer-comparison {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 1000px;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+
+.trainer-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.trainer-comparison th,
+.trainer-comparison td {
+  border-bottom: 1px solid #444;
+  padding: 1rem;
+}
+
+.trainer-comparison th {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* 🎯 Join Our Team */
+.join-our-team {
+  text-align: center;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  margin: 3rem auto;
+  max-width: 800px;
+  box-shadow: var(--shadow-light);
+}
+
+.join-our-team button {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.join-our-team button:hover {
+  background: #222;
+  transform: scale(1.1);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .carousel {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .trainer-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .trainer-categories {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trainer-categories button {
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainers-section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .trainer-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .trainer-card p {
+    font-size: 1rem;
+  }
+
+  .social-links img {
+    width: 25px;
+    height: 25px;
+  }
+}

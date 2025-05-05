@@ -1,0 +1,75 @@
+.about p, h1 {
+  text-align: center;
+}
+
+.services p, h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 400px;
+  margin: 16px;
+  height: 110vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.card-image {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-image {
+  opacity: 0.9; /* Slightly fade the image on hover */
+}
+
+.card-text {
+  margin-top: 8px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.card:hover .card-text {
+  color: #007BFF; /* Change text color on hover */
+}
+
+.card h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+  transition: color 0.3s ease;
+}
+
+.card:hover h2 {
+  color: #0056b3; /* Change heading color on hover */
+}
+
+.service-card {
+  width: 40%;
+  height: 80vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px); /* Move the card up slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow effect */
+}
