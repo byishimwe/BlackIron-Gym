@@ -1,54 +1,90 @@
-import '../Styles/About&Services.css'
-import Services from './Services'
-import FAQs from './FAQs'
-import Community from './Community'
+import { motion } from "framer-motion";
+import Services from './Services';
+import FAQs from './FAQs';
+import Community from './Community';
 
-function AboutCard({image, title, description}) {
-  return(
-    <div className="card" style={{height: "90vh"}}>
-      <img src={image} alt="" className="card-image" />
-      <h2 className="card-text">{title}</h2>
-      <p>{description}</p>
+function AboutCard({ image, title, description, index }) {
+  return (
+    <motion.div
+      className="card max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden my-8 hover:shadow-2xl transition-shadow duration-300"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2 }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <img
+        src={image}
+        alt={title}
+        className="card-image w-full h-64 object-cover"
+      />
+      <div className="p-6">
+        <h2 className="card-text text-xl font-semibold text-gray-800 mb-4">
+          {title}
+        </h2>
+        <p className="text-gray-600">{description}</p>
+      </div>
+    </motion.div>
+  );
+}
+
+function About() {
+  const AboutEvents = [
+    {
+      image: "../public/warm-up.jpg",
+      title: "Our fitness journey",
+      description:
+        "Launched in 2020, our fitness center was created from a commitment to health and the goal of building a strong community.",
+    },
+    {
+      image: "Mission.jpg",
+      title: "Our Mission",
+      description:
+        "At our gym, we believe that fitness is not just about physical strength, but also about mental resilience and community support.",
+    },
+    {
+      image: "../public/commitment.jpg",
+      title: "Our Commitment",
+      description:
+        "We are committed to giving back to the community by promoting health and wellness initiatives. We regularly host workshops.",
+    },
+  ];
+
+  return (
+    <div className="bg-gray-100 py-16">
+      <motion.div
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        <h1 className="text-3xl font-bold text-gray-800 mb-4 text-shadow-lg">
+          Our Journey to Excellence
+        </h1>
+        <p className="text-lg text-gray-600">
+          Empowering Lives Through Fitness, one workout at a time.
+        </p>
+      </motion.div>
+
+      <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {AboutEvents.map((event, index) => (
+          <div
+            key={index}
+            className={
+              event.title === "Our Commitment" ? "hidden lg:block" : ""
+            }
+          >
+            <AboutCard index={index} {...event} />
+          </div>
+        ))}
+      </div>
+
+      {/* Additional sections */}
+      <Services />
+      <Community />
+      <FAQs />
     </div>
-  )
+  );
 }
 
-function About(){
-          const AboutEvents = [
-                    {
-                              image: "../public/warm-up.jpg",
-                              title: "The beginning of our fitness journey",
-                              description: "Launched in 2020, our fitness center was created from a commitment to health and the goal of building a strong community. The founders, who are passionate about fitness, dreamed of a space where people could gather to advance their physical and mental well-being"
-                    },
-                    {
-                              image: "Mission.jpg",
-                              title: "Our Mission",
-                              description: "At our gym, we believe that fitness is not just about physical strength, but also about mental resilience and community support. Our mission is to inspire and empower every member to achieve their personal fitness goals. We are dedicated to providing top-notch facilities, expert guidance, and a welcoming atmosphere where everyone can thrive."
-                    },
-                    {
-                              image: "../public/commitment.jpg",
-                              title: "Our Commitment",
-                              description: "We are committed to giving back to the community by promoting health and wellness initiatives. We regularly host workshops, fitness challenges, and charity events that not only enhance the fitness journey of our members but also contribute positively to the community at large. Together, we strive for a healthier future for everyone."
-                    }
-          ]
-          return (
-                    <div>
-                    <div className='about'>
-                              <h1>Our Journey to Excellence</h1>
-                              <p>Empowering Lives Through Fitness, one workout at a time.</p>
-                    </div>
-                    <div className="container nowrap">
-                              {
-                                        AboutEvents.map((event, index) => (
-                                                  <AboutCard key={index} {...event} />
-                                        ))
-                              }
-                    </div>
-                    <Services />
-                    <Community />
-                    <FAQs />
-                    </div>
-          )
-}
-
-export default About
+export default About;

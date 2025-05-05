@@ -1,97 +1,111 @@
-import '../Styles/Classes/Classes.css';
-import '../Styles/About&Services.css';
-
 function Classes() {
   return (
     <>
       {/* Hero Section */}
-      <section className='classes'>
-        <div className='hero'>
-          <h1>Find the Perfect Class for You!</h1>
-          <p>Whether you're a beginner or an advanced athlete, our expert-led fitness classes will help you achieve your goals while keeping you motivated.</p>
-          <button className='button' onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}>
+      <section
+        className="classes text-white py-16 px-8 bg-cover bg-center min-h-screen"
+        style={{ backgroundImage: 'url("../public/classes2.jpg")' }}
+      >
+        <div className="hero max-w-4xl mx-auto text-center mt-10">
+          <h1 className="text-4xl font-bold mb-4">Find the Perfect Class for You!</h1>
+          <p className="text-lg mb-6 text-gray-300">
+            Whether you're a beginner or an advanced athlete, our expert-led fitness classes will help you
+            achieve your goals while keeping you motivated.
+          </p>
+          <button
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-500 transition duration-300"
+            onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}
+          >
             Join now &raquo;
           </button>
         </div>
-        <img src="../public/classes2.jpg" alt="Gym classes" />
       </section>
 
       {/* Class Cards Section */}
-      <article id='about' className='class-cards'>
-        <h1>Transform Your Fitness Journey with Our Dynamic Classes</h1>
-        <div className="container" style={{ flexWrap: "wrap" }}>
+      <article id="about" className="py-16 px-8 bg-white">
+        <h1 className="text-3xl font-bold text-center text-gray-900 mb-8">Transform Your Fitness Journey</h1>
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
               image: "../public/Morning Yoga1.jpg",
               alt: "Card 1",
               title: "Morning Yoga Session",
-              description: "Start your day with our invigorating morning yoga classes designed to enhance flexibility, strength, and mindfulness. These sessions run from 7:00 AM to 8:00 AM and welcome all skill levels.",
+              description: "Start your day with yoga to enhance flexibility, strength, and mindfulness. Runs 7:00–8:00 AM for all skill levels.",
             },
             {
               image: "../public/HIIT.jpg",
               alt: "Card 2",
               title: "High-Intensity Interval Training (HIIT)",
-              description: "Push your limits with our high-intensity interval training (HIIT) classes, designed to improve endurance and burn calories efficiently. Held every weekday at 6:00 PM, these fast-paced workouts are perfect for those looking to maximize results in a short amount of time.",
+              description: "Burn calories with fast-paced HIIT classes held weekdays at 6:00 PM. Improve endurance and results quickly.",
             },
             {
               image: "../public/Strength.jpg",
               alt: "Card 3",
               title: "Strength Training Workshops",
-              description: "Build strength and confidence with our specialized strength training workshops, structured to help you develop muscle and enhance overall fitness. These sessions take place every Saturday at 10:00 AM and cater to all experience levels, from beginners learning the basics to advanced lifters refining their techniques.",
+              description: "Develop muscle and technique in Saturday workshops at 10:00 AM. Great for all levels.",
             },
             {
               image: "../public/Dance class.jpg",
               alt: "Card 4",
               title: "Dance Fitness Classes",
-              description: "Get your heart pumping with our exciting dance fitness classes, where movement meets music for a fun and energetic workout. Offered every Wednesday at 7:30 PM, these sessions blend cardio and dance routines, making them a great way to stay active while enjoying the beautiful upbeat and lively atmosphere.",
+              description: "Blend cardio and fun every Wednesday at 7:30 PM. Enjoy fitness through lively dance routines.",
             }
           ].map((item, index) => (
-            <div key={index} className="card" style={{ height: "80vh", width: "45%" }}>
-              <img src={item.image} alt={item.alt} className="card-image" />
-              <h2 className="card-text">{item.title}</h2>
-              <p>{item.description}</p>
-              <button className='class-button'>Join Now</button>
+            <div key={index} className="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <img src={item.image} alt={item.alt} className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h2 className="text-xl font-semibold text-gray-900 mb-4">{item.title}</h2>
+                <p className="text-gray-700 mb-6">{item.description}</p>
+                <button className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-500 transition duration-300">
+                  Join Now
+                </button>
+              </div>
             </div>
           ))}
         </div>
       </article>
 
-      {/* Testimonials Section (Keeping the Exact Order) */}
-      <article>
-        <h1>What Our Members Say</h1>
-        <p style={{ textAlign: "center" }}>Discover how our gym has transformed lives through the power of fitness.</p>
+      {/* Testimonials Section */}
+      <article className="py-16 px-8 bg-gray-100 rounded-lg w-[90%] lg:w-[95%] m-auto">
+        <h1 className="text-3xl font-bold text-center text-gray-900 mb-8">What Our Members Say</h1>
+        <p className="text-center text-lg text-gray-600 mb-12">Discover how our gym has transformed lives through fitness.</p>
 
-        {/* Testimonial 1 - Image on Left */}
-        <div className='members'>
-          <img src="../public/person.jpg" alt="Testimonial 1" />
-          <div className='text'>
-            <h2>Incredible Transformation</h2>
-            <p>
-              I joined Gym six months ago, and the results have been life-changing. The supportive community and excellent trainers have motivated me to push beyond my limits. Every workout feels invigorating, and I've gained both strength and confidence.
-            </p>
-          </div>
-        </div>
-
-        {/* Testimonial 2 - Image on Right */}
-        <div className='members'>
-          <div className='text'>
-            <h2>A Welcoming Environment</h2>
-            <p>
-              From day one, I felt welcomed and supported. The diverse range of classes and workshops has helped me find my passion for fitness and well-being. Each session has not only challenged me but also fostered a sense of community that keeps me motivated.
-            </p>
-          </div>
-          <img src="../public/person1.jpg" alt="Testimonial 2" />
-        </div>
-
-        {/* Testimonial 3 - Image on Left */}
-        <div className='members'>
-          <img src="../public/person3.jpg" alt="Testimonial 3" />
-          <div className='text'>
-            <h2>Achieving My Goals</h2>
-            <p>
-              Thanks to the personalized training plans at Gym, I’ve achieved my fitness goals faster than I ever thought possible. The trainers genuinely care about my progress and success. Their expertise and encouragement have been instrumental in keeping me accountable.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {[ 
+            {
+              name: "Alex Johnson",
+              image: "../public/person.jpg",
+              title: "Incredible Transformation",
+              description: "Six months in and I feel amazing. The trainers and community here are top-notch."
+            },
+            {
+              name: "Sophie Lee",
+              image: "../public/person1.jpg",
+              title: "A Welcoming Environment",
+              description: "The classes are diverse and the atmosphere is so welcoming—it keeps me coming back."
+            },
+            {
+              name: "David Kim",
+              image: "../public/person3.jpg",
+              title: "Achieving My Goals",
+              description: "The personalized plans and trainer support helped me reach my goals faster than I expected."
+            },
+            {
+              name: "Emily Roberts",
+              image: "../public/person4.jpg",
+              title: "A Supportive Community",
+              description: "I’ve made great progress thanks to the supportive community. Everyone motivates each other to do their best."
+            }
+          ].map((testimonial, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center mb-4">
+                <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full object-cover mr-4" />
+                <h3 className="text-lg font-bold text-gray-800">{testimonial.name}</h3>
+              </div>
+              <h4 className="text-xl font-semibold text-gray-700 mb-2">{testimonial.title}</h4>
+              <p className="text-gray-600">{testimonial.description}</p>
+            </div>
+          ))}
         </div>
       </article>
     </>

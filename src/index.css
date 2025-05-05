@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+  }
+
+  body {
+    line-height: 1.5;
+  }
+
+  a:focus, button:focus {
+    outline: 2px solid #4CAF50; 
+    outline-offset: 2px;
+  }
+
+  :root {
+    --primary-color: #3490dc;
+    --secondary-color: #ffed4a;
+  }
+
+  h1 {
+    @apply text-5xl font-extrabold leading-tight mb-4 text-center;
+  }
+
+  .active {
+    color: #3490dc;
+  }
+}

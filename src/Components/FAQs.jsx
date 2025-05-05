@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Styles/Home/FAQs.css';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function FAQs() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -44,22 +44,47 @@ function FAQs() {
     {
       question: "Is parking available for gym members, and do you provide bicycle storage or alternative transport facilities?",
       answer: "Yes, we have a dedicated parking area for members. We also offer secure bicycle racks and encourage eco-friendly commuting options to promote a healthy lifestyle."
+    },
+    {
+      question: "Can I bring a guest with me to the gym, and if so, what are the guest policies?",
+      answer: "Yes, members are allowed to bring guests. We offer guest passes for a small fee, and the guest can enjoy the same access to our facilities. However, guests must be accompanied by the member at all times during their visit."
     }
   ];
 
   return (
-    <section className="faqs">
-      <h1>Frequently Asked Questions</h1>
-      <div className="faq-container">
+    <section className="faqs py-16 px-6 bg-gray-100">
+      <h1 className="text-3xl font-semibold text-center text-gray-800 mb-12">Frequently Asked Questions</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {faqData.map((faq, index) => (
-          <div key={index} className="faq">
-            <h3 onClick={() => toggleFAQ(index)}>
-              {faq.question}
-              <span className="arrow">{openIndex === index ? "🡅" : "🡇"}</span>
-            </h3>
-            <p className={`faq-answer ${openIndex === index ? 'open' : ''}`} style={{color: "dodgerblue"}}>
-              {faq.answer}
-            </p>
+          <div key={index} className="bg-white rounded-xl shadow-md transition-shadow duration-300 hover:shadow-xl">
+            <div
+              onClick={() => toggleFAQ(index)}
+              className="p-5 cursor-pointer flex justify-between items-center"
+            >
+              <h3 className="text-lg font-semibold text-gray-800">{faq.question}</h3>
+              <motion.span
+                className="ml-4 text-2xl"
+                animate={{ rotate: openIndex === index ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                🡇
+              </motion.span>
+            </div>
+
+            <AnimatePresence initial={false}>
+              {openIndex === index && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="px-5 pb-4 text-blue-600">
+                    {faq.answer}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>

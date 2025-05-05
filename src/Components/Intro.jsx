@@ -1,36 +1,79 @@
-function Intro(){
-          return(
-                    <article id="intro">
-                              <h1>Introduction</h1>
-                              <div className='members' style={{marginTop: '2rem'}}>
-                                        <img src="./Intro1.webp" alt="" />
-                                        <div className='text'>
-                                                  <h2>State-of-the-Art Facilities</h2>
-                                                  <p>
-                                                  Our gym is equipped with the latest fitness technology and equipment, ensuring you have everything you need to achieve your goals. From spacious workout areas to specialized zones for various activities, we create a motivating environment for your fitness journey. Additionally, our facilities are designed to accommodate all fitness levels, providing a welcoming atmosphere where everyone can thrive and push their limits. To further enhance your experience, we offer a variety of amenities, including clean locker rooms, shower facilities, and complimentary refreshments, making your visit not just a workout but a comprehensive fitness experience.
-                                                  </p>
-                                        </div>
-                              </div>
-                              <div className='members'>
-                                        <div className='text'>
-                                                  <h2>Expert Trainers</h2>
-                                                  <p>
-                                                  Our certified trainers are passionate about helping you succeed. They offer personalized guidance, motivation, and support tailored to your unique fitness level and aspirations. With their expertise, you'll learn proper techniques and stay on track with your fitness plan. They are committed to creating a positive and encouraging atmosphere, ensuring that you not only reach your goals but also enjoy every step of your fitness journey. By fostering a culture of accountability and encouragement, our trainers inspire you to push beyond your comfort zone and achieve results you never thought possible.
-                                                  </p>
-                                        </div>
-                                        <img src="./Intro2.webp" alt="" />
-                              </div>
-                              <div className='members'>
-                                        <img src="./Intro3.webp" alt="" />
-                                        <div className='text'>
-                                                  <h2>Community & Support</h2>
-                                                  <p>
-                                                  At our gym, you’re not just another member; you’re part of a supportive community. We believe that fitness is more enjoyable when shared with others. Engage in group classes, social events, and fitness challenges that foster camaraderie and encouragement. Together, we celebrate achievements and motivate each other to reach new heights, creating lasting friendships along the way. Our members benefit from a network of encouragement, helping each individual stay accountable and inspired on their fitness journeys. With regular meet-ups and shared goals, the bonds formed here extend beyond the gym, making every workout an opportunity for growth and connection.
-                                                  </p>
-                                        </div>
-                              </div>
-                    </article>
-          )
+import { motion } from "framer-motion";
+
+const introSections = [
+  {
+    title: "State of the Art Facilities",
+    image: "./Intro1.webp",
+    description:
+      "Our gym is equipped with the latest fitness technology and equipment, ensuring you have everything you need to achieve your goals. From spacious workout areas to specialized zones for various activities, we create a motivating environment for your fitness journey.",
+    reverse: true,
+  },
+  {
+    title: "Expert Trainers",
+    image: "./Intro2.webp",
+    description:
+      "Our certified trainers are passionate about helping you succeed. They offer personalized guidance, motivation, and support tailored to your unique fitness level and aspirations. With their expertise, you'll learn proper techniques and stay on track with your fitness plan.",
+    reverse: false,
+  },
+  {
+    title: "Community & Support",
+    image: "./Intro3.webp",
+    description:
+      "At our gym, you’re not just another member; you’re part of a supportive community. We believe that fitness is more enjoyable when shared with others. Engage in group classes, social events, and fitness challenges that foster camaraderie and encouragement.",
+    reverse: true,
+  },
+];
+
+const textVariants = {
+  hidden: (direction) => ({
+    opacity: 0,
+    x: direction === "left" ? -100 : 100,
+  }),
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7 },
+  },
+};
+
+function Intro() {
+  return (
+    <article id="intro" className="space-y-16 mb-10 px-6 py-12">
+      <h1 className="text-6xl text-center font-bold mb-12">Introduction</h1>
+
+      {introSections.map((section, index) => (
+        <div
+          key={index}
+          className={`flex flex-col-reverse ${
+            section.reverse ? "md:flex-row-reverse" : "md:flex-row"
+          } items-center justify-between gap-8`}
+        >
+          <motion.img
+            src={section.image}
+            alt={section.title}
+            loading="lazy"
+            className="w-full md:w-1/2 rounded-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.4 }}
+          />
+
+          <motion.div
+            className="w-full md:w-1/2 text-center md:text-left"
+            custom={section.reverse ? "right" : "left"}
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            viewport={{ once: true, amount: 0.4 }}
+          >
+            <h2 className="text-5xl font-semibold mb-5">{section.title}</h2>
+            <p className="text-2xl text-gray-700">{section.description}</p>
+          </motion.div>
+        </div>
+      ))}
+    </article>
+  );
 }
 
-export default Intro
+export default Intro;
