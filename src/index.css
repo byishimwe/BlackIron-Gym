@@ -3,31 +3,57 @@
 @tailwind utilities;
 
 @layer base {
-  html,
-  body {
+  html {
     scroll-behavior: smooth;
-    font-family: 'Arial', sans-serif;
+    color-scheme: dark;
+    background-color: #0D0D0D;
+    color: #F4F1EA;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
   body {
-    line-height: 1.5;
+    line-height: 1.6;
+    background-color: #0D0D0D;
+    color: #F4F1EA;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
 
-  a:focus, button:focus {
-    outline: 2px solid #4CAF50; 
-    outline-offset: 2px;
+  /* Accessible focus states across interactive elements */
+  *:focus-visible {
+    outline: 2px solid #B83A2E;
+    outline-offset: 3px;
   }
 
-  :root {
-    --primary-color: #3490dc;
-    --secondary-color: #ffed4a;
+  /* Clean headings default to display font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .tracking-athletic {
+    letter-spacing: 0.08em;
   }
 
-  h1 {
-    @apply text-5xl font-extrabold leading-tight mb-4 text-center;
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
   }
 
-  .active {
-    color: #3490dc;
+  .text-shadow-md {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
