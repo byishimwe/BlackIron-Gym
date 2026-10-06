@@ -11,7 +11,7 @@ function NotFound() {
       />
 
       <div className="py-20 max-w-content mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-brand-muted text-base mb-8 max-w-md mx-auto">
+        <p className="text-brand-body text-base mb-8 max-w-md mx-auto">
           Head back to the main training floor or explore our scheduled disciplines and membership plans.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

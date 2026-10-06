@@ -150,10 +150,13 @@ function Contact() {
                 </span>
                 <div className="space-y-1.5 text-sm text-brand-body font-sans">
                   <p>
-                    <strong className="text-brand-bone">Email:</strong> hello@imizi.rw
+                    <strong className="text-brand-bone">Email:</strong> hello@imizi.example
                   </p>
                   <p>
                     <strong className="text-brand-bone">Reception:</strong> +250 788 000 000
+                  </p>
+                  <p className="text-[11px] text-brand-muted pt-1">
+                    Portfolio concept demonstration · Contact details are illustrative.
                   </p>
                 </div>
               </div>
@@ -174,13 +177,13 @@ function Contact() {
 
               {isSubmitted ? (
                 /* Client-Standard Success State */
-                <div className="space-y-6 animate-fadeIn">
+                <div className="space-y-6">
                   <div className="p-5 bg-brand-dark border-l-4 border-brand-red rounded-r-sm">
                     <h3 className="font-display uppercase tracking-wide text-lg text-brand-bone mb-1">
-                      Request Received — We&apos;ll Be In Touch Shortly.
+                      DEMO REQUEST CAPTURED
                     </h3>
                     <p className="text-xs sm:text-sm text-brand-body leading-relaxed">
-                      Thank you for reaching out. A coach will review your notes and confirm your preferred training session within one business day.
+                      This is a portfolio concept demonstration. No actual request has been transmitted or saved. In a production build, your booking details would be routed to the gym&apos;s management or CRM system.
                     </p>
                   </div>
 
@@ -199,7 +202,7 @@ function Contact() {
 
                   <div className="pt-2">
                     <Button onClick={handleReset} variant="secondary" size="md">
-                      Submit another inquiry
+                      Submit another demo request
                     </Button>
                   </div>
 
@@ -223,6 +226,8 @@ function Contact() {
                       name="name"
                       type="text"
                       required
+                      aria-invalid={errors.name ? 'true' : 'false'}
+                      aria-describedby={errors.name ? 'name-error' : undefined}
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. Marc Rutayisire"
@@ -231,7 +236,7 @@ function Contact() {
                       }`}
                     />
                     {errors.name && (
-                      <p className="mt-1.5 text-xs text-brand-red font-sans">{errors.name}</p>
+                      <p id="name-error" className="mt-1.5 text-xs text-brand-red font-sans">{errors.name}</p>
                     )}
                   </div>
 
@@ -249,6 +254,8 @@ function Contact() {
                         name="email"
                         type="email"
                         required
+                        aria-invalid={errors.email ? 'true' : 'false'}
+                        aria-describedby={errors.email ? 'email-error' : undefined}
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="you@domain.com"
@@ -257,7 +264,7 @@ function Contact() {
                         }`}
                       />
                       {errors.email && (
-                        <p className="mt-1.5 text-xs text-brand-red font-sans">{errors.email}</p>
+                        <p id="email-error" className="mt-1.5 text-xs text-brand-red font-sans">{errors.email}</p>
                       )}
                     </div>
 
@@ -333,7 +340,7 @@ function Contact() {
                       Request Your Session
                     </Button>
                     <p className="mt-3 text-center text-xs font-sans text-brand-muted">
-                      No commitment required · Instant confirmation
+                      Portfolio demo · No request will be transmitted.
                     </p>
                   </div>
                 </form>

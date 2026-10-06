@@ -1,7 +1,7 @@
 export const gymProofStats = [
   { label: "Open Every Week", value: "7 Days", detail: "Early doors to late sessions" },
   { label: "Training Floor", value: "850 m²", detail: "Racks, platforms, turf, ergs" },
-  { label: "Coaching Format", value: "100%", detail: "Coach-led floor and small groups" },
+  { label: "Training Format", value: "Coach-Led", detail: "Floor guidance and small groups" },
   { label: "Kigali Flagship", value: "Kimihurura", detail: "Centrally located training club" },
 ];
 
@@ -276,7 +276,7 @@ export const pricingPlans = [
     period: "per month",
     tagline: "Full class and floor access for dedicated athletic results.",
     featured: true,
-    badge: "Best for Consistency",
+    badge: "Recommended for Consistency",
     inclusions: [
       "Unlimited access to ALL group classes",
       "Unrestricted floor & turf access 7 days/week",

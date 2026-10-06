@@ -25,7 +25,7 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    const title = routeTitles[location.pathname] || 'IMIZI Training Club — Strength Starts at the Roots';
+    const title = routeTitles[location.pathname] || 'Page Not Found | IMIZI Training Club';
     document.title = title;
   }, [location.pathname]);
 

@@ -15,7 +15,7 @@ function Home() {
           <img
             src="/Hero.jpg"
             alt="Athlete preparing barbell for heavy lift at IMIZI Training Club"
-            className="w-full h-full object-cover object-center filter brightness-65 contrast-110"
+            className="w-full h-full object-cover object-center filter brightness-[0.65] contrast-[1.10]"
             fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/75 to-brand-black/40" />
@@ -108,7 +108,7 @@ function Home() {
                     <img
                       src={pillar.image}
                       alt={pillar.alt}
-                      className="w-full h-full object-cover filter contrast-105 transition-transform duration-500 group-hover:scale-102"
+                      className="w-full h-full object-cover filter contrast-[1.05] transition-transform duration-500 group-hover:scale-[1.02]"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent pointer-events-none" />
@@ -253,7 +253,7 @@ function Home() {
                 Claim your free trial
               </Button>
               <div className="text-center text-xs font-sans text-brand-muted">
-                No credit card required · Instant confirmation
+                Portfolio demo · No credit card required
               </div>
             </div>
           </div>

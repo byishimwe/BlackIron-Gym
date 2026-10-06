@@ -17,7 +17,7 @@ function SectionHeader({
     >
       {eyebrow && (
         <span
-          className={`inline-block text-xs md:text-sm font-display uppercase tracking-widest font-semibold mb-2.5 ${
+          className={`inline-block text-xs md:text-sm font-sans uppercase tracking-widest font-semibold mb-2.5 ${
             isLight ? 'text-brand-red' : 'text-brand-red'
           }`}
         >
@@ -36,7 +36,7 @@ function SectionHeader({
       {description && (
         <p
           className={`text-base sm:text-lg leading-relaxed ${
-            isLight ? 'text-gray-700' : 'text-brand-muted'
+            isLight ? 'text-gray-700' : 'text-brand-body'
           }`}
         >
           {description}

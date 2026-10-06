@@ -17,7 +17,7 @@ function Pricing() {
       <PageHero
         eyebrow="Straightforward Rates"
         title="Transparent Memberships"
-        description="No hidden cancellation penalties, no initiation gimmicks. Direct access to Kigali's premier strength training floor and coach-led classes."
+        description="No hidden cancellation penalties, no initiation gimmicks. Direct access to our Kimihurura strength training floor and coach-led classes."
       />
 
       {/* 2. MEMBERSHIP PLANS (IN RWF) */}

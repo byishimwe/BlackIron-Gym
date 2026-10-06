@@ -88,7 +88,7 @@ function About() {
               <img
                 src="/wcu1.jpg"
                 alt="IMIZI training floor with barbells and racks"
-                className="w-full h-full object-cover filter contrast-105"
+                className="w-full h-full object-cover filter contrast-[1.05]"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent pointer-events-none" />
@@ -136,7 +136,7 @@ function About() {
               <img
                 src="/wcu2.jpg"
                 alt="IMIZI gym equipment detail"
-                className="w-full h-full object-cover hover:scale-103 transition-transform duration-500"
+                className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500"
                 loading="lazy"
               />
             </div>
@@ -144,7 +144,7 @@ function About() {
               <img
                 src="/Intro1.webp"
                 alt="Barbell training setup on floor"
-                className="w-full h-full object-cover hover:scale-103 transition-transform duration-500"
+                className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500"
                 loading="lazy"
               />
             </div>

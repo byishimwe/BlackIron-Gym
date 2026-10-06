@@ -32,7 +32,7 @@ function Trainers() {
                 <img
                   src={trainer.image}
                   alt={`Portrait of ${trainer.name}, ${trainer.role}`}
-                  className="w-full h-full object-cover filter contrast-105 transition-transform duration-500 group-hover:scale-103"
+                  className="w-full h-full object-cover filter contrast-[1.05] transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent pointer-events-none" />

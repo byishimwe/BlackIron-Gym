@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import Button from './Button';
 
@@ -14,6 +14,16 @@ function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const toggleButtonRef = useRef(null);
+  const wasMobileOpenRef = useRef(false);
+
+  // Restore focus to toggle button when mobile drawer closes
+  useEffect(() => {
+    if (wasMobileOpenRef.current && !isMobileOpen) {
+      toggleButtonRef.current?.focus();
+    }
+    wasMobileOpenRef.current = isMobileOpen;
+  }, [isMobileOpen]);
 
   // Close mobile drawer upon route change
   useEffect(() => {
@@ -71,7 +81,8 @@ function Header() {
             <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded bg-brand-dark border border-brand-border flex items-center justify-center overflow-hidden p-1 transition-transform group-hover:scale-105">
               <img
                 src="/Logo.png"
-                alt="IMIZI Logo"
+                alt=""
+                aria-hidden="true"
                 className="w-full h-full object-contain filter drop-shadow"
               />
             </div>
@@ -117,6 +128,7 @@ function Header() {
           {/* Mobile Menu Toggle Button */}
           <div className="flex md:hidden items-center">
             <button
+              ref={toggleButtonRef}
               type="button"
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               className="p-2 text-brand-bone rounded hover:bg-brand-steel focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red shrink-0"

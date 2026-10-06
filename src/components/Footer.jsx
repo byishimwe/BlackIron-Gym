@@ -17,7 +17,8 @@ function Footer() {
               <div className="w-10 h-10 rounded bg-brand-dark border border-brand-border flex items-center justify-center p-1">
                 <img
                   src="/Logo.png"
-                  alt="IMIZI Logo"
+                  alt=""
+                  aria-hidden="true"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -120,7 +121,7 @@ function Footer() {
             &copy; {currentYear} IMIZI Training Club. All rights reserved.
           </div>
           <div className="text-center sm:text-right text-[11px] text-brand-muted/80">
-            Kigali, Rwanda
+            Portfolio Concept Demonstration · Kigali, Rwanda
           </div>
         </div>
       </div>
