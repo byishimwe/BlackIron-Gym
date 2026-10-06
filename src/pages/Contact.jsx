@@ -92,7 +92,7 @@ function Contact() {
       <PageHero
         eyebrow="Location & Inquiries"
         title="Come See What The Work Feels Like"
-        description="Whether you want to try a single coach-led session, join a membership tier, or ask about training facilities in Kigali, get in touch below."
+        description="Whether you want to try an introductory session, explore memberships, or inquire about coaching in Kigali, get in touch below."
       />
 
       <section className="py-20 max-w-content mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,35 +102,32 @@ function Contact() {
             <SectionHeader
               eyebrow="The Facility"
               title="Kigali Flagship"
-              description="Conveniently situated in Kimihurura with secure on-site parking and clean athlete locker amenities."
+              description="Conveniently situated in Kimihurura with secure parking and complete locker amenities."
               className="mb-8"
             />
 
             <div className="space-y-6">
               {/* Location Card */}
               <div className="bg-brand-card p-6 rounded-sm border border-brand-border">
-                <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold block mb-2">
+                <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-2">
                   Training Ground Location
                 </span>
                 <h3 className="text-xl font-display uppercase tracking-tight text-brand-bone mb-1">
-                  IMIZI Training Club Kigali
+                  IMIZI Training Club
                 </h3>
-                <p className="text-sm text-brand-muted leading-relaxed">
-                  KG 563 St, Kimihurura Sector, Gasabo District
+                <p className="text-sm text-brand-body leading-relaxed">
+                  Kimihurura, Gasabo District
                   <br />
                   Kigali, Rwanda
                 </p>
-                <div className="mt-3 text-xs font-mono text-brand-bone-muted bg-brand-dark p-2 rounded-sm border border-brand-border">
-                  📍 Demo Location: Kimihurura, Kigali
-                </div>
               </div>
 
               {/* Floor Hours */}
               <div className="bg-brand-card p-6 rounded-sm border border-brand-border">
-                <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold block mb-2">
+                <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-2">
                   Floor Operational Hours
                 </span>
-                <div className="space-y-2 text-sm text-brand-muted">
+                <div className="space-y-2 text-sm text-brand-body font-sans">
                   <div className="flex justify-between py-1 border-b border-brand-border/40">
                     <span className="text-brand-bone-muted">Monday – Friday</span>
                     <span className="font-mono text-brand-bone">05:30 – 22:00</span>
@@ -148,18 +145,15 @@ function Contact() {
 
               {/* Direct Reach */}
               <div className="bg-brand-card p-6 rounded-sm border border-brand-border">
-                <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold block mb-2">
+                <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-2">
                   Direct Inquiries
                 </span>
-                <div className="space-y-1.5 text-sm text-brand-muted">
+                <div className="space-y-1.5 text-sm text-brand-body font-sans">
                   <p>
-                    <strong className="text-brand-bone-muted">Email:</strong> floor@imizi.demo
+                    <strong className="text-brand-bone">Email:</strong> hello@imizi.rw
                   </p>
                   <p>
-                    <strong className="text-brand-bone-muted">Reception:</strong> +250 788 000 000
-                  </p>
-                  <p className="text-xs text-brand-muted pt-1">
-                    * Demo contact details for portfolio presentation.
+                    <strong className="text-brand-bone">Reception:</strong> +250 788 000 000
                   </p>
                 </div>
               </div>
@@ -170,29 +164,31 @@ function Contact() {
           <div className="lg:col-span-7">
             <div className="bg-brand-card p-5 sm:p-8 lg:p-10 rounded-sm border border-brand-border shadow-xl">
               <h2 className="text-2xl sm:text-3xl font-display uppercase tracking-tight text-brand-bone mb-2">
-                {isSubmitted ? 'Enquiry Captured' : 'Request A Trial Or Membership'}
+                {isSubmitted ? 'Request Confirmed' : 'Request A Trial Or Membership'}
               </h2>
-              <p className="text-sm text-brand-muted mb-8 leading-relaxed">
+              <p className="text-sm text-brand-body mb-8 leading-relaxed">
                 {isSubmitted
-                  ? 'Review the captured details below.'
-                  : 'Fill in your details to arrange your first session or ask our coaching team a specific question.'}
+                  ? 'Your request details have been captured.'
+                  : 'Fill in your details to schedule your introductory session or ask our coaching staff a question.'}
               </p>
 
               {isSubmitted ? (
-                /* Honest Success State */
+                /* Client-Standard Success State */
                 <div className="space-y-6 animate-fadeIn">
                   <div className="p-5 bg-brand-dark border-l-4 border-brand-red rounded-r-sm">
                     <h3 className="font-display uppercase tracking-wide text-lg text-brand-bone mb-1">
-                      Thanks — your enquiry has been captured in this portfolio demo.
+                      Request Received — We&apos;ll Be In Touch Shortly.
                     </h3>
-                    <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                      No data has been sent to an external server or stored in a persistent database. In a production deployment, this form would integrate with your gym&apos;s CRM or reservation API.
+                    <p className="text-xs sm:text-sm text-brand-body leading-relaxed">
+                      Thank you for reaching out. A coach will review your notes and confirm your preferred training session within one business day.
                     </p>
                   </div>
 
                   {submittedData && (
                     <div className="bg-brand-dark/60 p-5 rounded-sm border border-brand-border text-xs sm:text-sm space-y-2">
-                      <div className="font-mono text-brand-red uppercase text-xs">Captured Submission Summary:</div>
+                      <div className="font-sans uppercase text-brand-red font-semibold text-xs tracking-wider">
+                        Submission Details:
+                      </div>
                       <div><strong className="text-brand-bone-muted">Name:</strong> {submittedData.name}</div>
                       <div><strong className="text-brand-bone-muted">Email:</strong> {submittedData.email}</div>
                       {submittedData.phone && <div><strong className="text-brand-bone-muted">Phone:</strong> {submittedData.phone}</div>}
@@ -203,9 +199,13 @@ function Contact() {
 
                   <div className="pt-2">
                     <Button onClick={handleReset} variant="secondary" size="md">
-                      Submit another test inquiry
+                      Submit another inquiry
                     </Button>
                   </div>
+
+                  <p className="text-[11px] font-sans text-brand-muted">
+                    * Portfolio demonstration mode · Form validated and captured in-browser
+                  </p>
                 </div>
               ) : (
                 /* Accessible Form */
@@ -214,7 +214,7 @@ function Contact() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-xs font-display uppercase tracking-wider text-brand-bone mb-2"
+                      className="block text-xs font-sans uppercase tracking-wider text-brand-bone font-semibold mb-2"
                     >
                       Full Name <span className="text-brand-red">*</span>
                     </label>
@@ -231,7 +231,7 @@ function Contact() {
                       }`}
                     />
                     {errors.name && (
-                      <p className="mt-1.5 text-xs text-brand-red font-mono">{errors.name}</p>
+                      <p className="mt-1.5 text-xs text-brand-red font-sans">{errors.name}</p>
                     )}
                   </div>
 
@@ -240,7 +240,7 @@ function Contact() {
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-xs font-display uppercase tracking-wider text-brand-bone mb-2"
+                        className="block text-xs font-sans uppercase tracking-wider text-brand-bone font-semibold mb-2"
                       >
                         Email Address <span className="text-brand-red">*</span>
                       </label>
@@ -257,16 +257,16 @@ function Contact() {
                         }`}
                       />
                       {errors.email && (
-                        <p className="mt-1.5 text-xs text-brand-red font-mono">{errors.email}</p>
+                        <p className="mt-1.5 text-xs text-brand-red font-sans">{errors.email}</p>
                       )}
                     </div>
 
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-xs font-display uppercase tracking-wider text-brand-bone mb-2"
+                        className="block text-xs font-sans uppercase tracking-wider text-brand-bone font-semibold mb-2"
                       >
-                        Phone Number <span className="text-brand-muted text-[10px]">(Optional)</span>
+                        Phone Number <span className="text-brand-muted text-[10px] lowercase font-normal">(optional)</span>
                       </label>
                       <input
                         id="phone"
@@ -284,7 +284,7 @@ function Contact() {
                   <div>
                     <label
                       htmlFor="interest"
-                      className="block text-xs font-display uppercase tracking-wider text-brand-bone mb-2"
+                      className="block text-xs font-sans uppercase tracking-wider text-brand-bone font-semibold mb-2"
                     >
                       Area of Interest <span className="text-brand-red">*</span>
                     </label>
@@ -298,7 +298,7 @@ function Contact() {
                       <option value="trial">Free Trial Session</option>
                       <option value="membership">Standard / Unlimited Membership</option>
                       <option value="pt">1-on-1 Personal Training Coaching</option>
-                      <option value="classes">Group Training & Disciplines</option>
+                      <option value="classes">Group Training Disciplines</option>
                       <option value="general">General Question</option>
                     </select>
                   </div>
@@ -307,9 +307,9 @@ function Contact() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-xs font-display uppercase tracking-wider text-brand-bone mb-2"
+                      className="block text-xs font-sans uppercase tracking-wider text-brand-bone font-semibold mb-2"
                     >
-                      Training Goals or Questions <span className="text-brand-muted text-[10px]">(Optional)</span>
+                      Training Goals or Questions <span className="text-brand-muted text-[10px] lowercase font-normal">(optional)</span>
                     </label>
                     <textarea
                       id="message"
@@ -317,7 +317,7 @@ function Contact() {
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell us about your background, injury history, or desired session times..."
+                      placeholder="Tell us about your background, training experience, or preferred session times..."
                       className="w-full bg-brand-dark border border-brand-border rounded-sm px-4 py-3 text-sm text-brand-bone placeholder-brand-muted/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red resize-y"
                     />
                   </div>
@@ -330,10 +330,10 @@ function Contact() {
                       size="lg"
                       className="w-full justify-center"
                     >
-                      Send Trial / Membership Request
+                      Request Your Session
                     </Button>
-                    <p className="mt-3 text-center text-[11px] font-mono text-brand-muted">
-                      Portfolio demo form · Validated locally in-browser
+                    <p className="mt-3 text-center text-xs font-sans text-brand-muted">
+                      No commitment required · Instant confirmation
                     </p>
                   </div>
                 </form>
@@ -354,24 +354,24 @@ function Contact() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-brand-card p-6 rounded-sm border border-brand-border">
-              <span className="font-mono text-xl font-bold text-brand-red block mb-2">01</span>
+              <span className="font-display text-2xl font-bold text-brand-red block mb-2">01</span>
               <h3 className="font-display uppercase text-lg text-brand-bone mb-2">Arrive 10 Mins Early</h3>
-              <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                Check in at the desk, meet your assigned coach, and stow your gear in the locker rooms before the session starts.
+              <p className="text-xs sm:text-sm text-brand-body leading-relaxed">
+                Check in at reception, meet your assigned coach, and stow your gear in the locker rooms before the session begins.
               </p>
             </div>
             <div className="bg-brand-card p-6 rounded-sm border border-brand-border">
-              <span className="font-mono text-xl font-bold text-brand-red block mb-2">02</span>
+              <span className="font-display text-2xl font-bold text-brand-red block mb-2">02</span>
               <h3 className="font-display uppercase text-lg text-brand-bone mb-2">Appropriate Footwear</h3>
-              <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                Bring flat, clean training shoes or lifting shoes. Clean shoes protect the lifting platforms and maintain floor hygiene.
+              <p className="text-xs sm:text-sm text-brand-body leading-relaxed">
+                Bring clean flat training shoes or lifting footwear to preserve platform hygiene and support barbell mechanics.
               </p>
             </div>
             <div className="bg-brand-card p-6 rounded-sm border border-brand-border">
-              <span className="font-mono text-xl font-bold text-brand-red block mb-2">03</span>
+              <span className="font-display text-2xl font-bold text-brand-red block mb-2">03</span>
               <h3 className="font-display uppercase text-lg text-brand-bone mb-2">Movement Check</h3>
-              <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                Your coach will review your movement patterns and scale barbell or conditioning loads to your comfort level.
+              <p className="text-xs sm:text-sm text-brand-body leading-relaxed">
+                Your coach will review your movement history and calibrate barbell or conditioning loads to your current comfort level.
               </p>
             </div>
           </div>

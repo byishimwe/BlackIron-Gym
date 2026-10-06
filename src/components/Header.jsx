@@ -79,7 +79,7 @@ function Header() {
               <span className="font-display uppercase tracking-wider font-bold text-lg sm:text-xl text-brand-bone leading-none">
                 IMIZI
               </span>
-              <span className="text-[10px] sm:text-[11px] font-sans italic tracking-[0.22em] text-brand-muted uppercase leading-tight mt-0.5">
+              <span className="text-[10px] sm:text-[11px] font-sans font-medium tracking-[0.22em] text-brand-muted uppercase leading-tight mt-0.5">
                 Training Club
               </span>
             </div>
@@ -95,9 +95,9 @@ function Header() {
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `px-3 py-1.5 text-xs lg:text-sm font-display uppercase tracking-wider font-medium transition-colors rounded-sm ${
+                  `px-3 py-1.5 text-xs lg:text-sm font-sans uppercase tracking-wider font-semibold transition-colors rounded-sm ${
                     isActive
-                      ? 'text-brand-red font-semibold'
+                      ? 'text-brand-red'
                       : 'text-brand-bone-muted hover:text-white hover:bg-white/5'
                   }`
                 }
@@ -155,7 +155,7 @@ function Header() {
       {isMobileOpen && (
         <div
           id="mobile-navigation"
-          className="fixed inset-0 top-[65px] bg-brand-black/98 z-40 md:hidden flex flex-col px-6 py-8 border-t border-brand-border overflow-y-auto"
+          className="fixed left-0 right-0 top-[65px] h-[calc(100dvh-65px)] bg-brand-black z-50 md:hidden flex flex-col px-6 py-8 border-t border-brand-border overflow-y-auto"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
@@ -164,7 +164,7 @@ function Header() {
             <Link
               to="/"
               onClick={() => setIsMobileOpen(false)}
-              className="text-lg font-display uppercase tracking-widest text-brand-bone hover:text-brand-red py-2 border-b border-brand-border/40"
+              className="text-base font-sans uppercase tracking-widest font-semibold text-brand-bone hover:text-brand-red py-2 border-b border-brand-border/40"
             >
               Home
             </Link>
@@ -174,9 +174,9 @@ function Header() {
                 to={item.path}
                 onClick={() => setIsMobileOpen(false)}
                 className={({ isActive }) =>
-                  `text-lg font-display uppercase tracking-widest py-2 border-b border-brand-border/40 transition-colors ${
+                  `text-base font-sans uppercase tracking-widest font-semibold py-2 border-b border-brand-border/40 transition-colors ${
                     isActive
-                      ? 'text-brand-red font-semibold pl-2 border-brand-red'
+                      ? 'text-brand-red pl-2 border-brand-red'
                       : 'text-brand-bone hover:text-brand-red'
                   }`
                 }
@@ -196,7 +196,7 @@ function Header() {
             >
               Start a free trial
             </Button>
-            <div className="text-center mt-4 text-xs font-mono text-brand-muted">
+            <div className="text-center mt-4 text-xs font-sans text-brand-muted">
               Kimihurura · Kigali, Rwanda
             </div>
           </div>

@@ -32,15 +32,15 @@ function Classes() {
               key={cls.id}
               className="bg-brand-card border border-brand-border rounded-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:border-brand-steel transition-colors"
             >
-              {/* Class Image */}
-              <div className="lg:col-span-5 relative aspect-[16/10] lg:aspect-auto">
+              {/* Class Image with Constrained 4:3 Aspect Ratio */}
+              <div className="lg:col-span-5 relative aspect-[16/10] lg:aspect-[4/3] bg-brand-dark overflow-hidden">
                 <img
                   src={cls.image}
                   alt={cls.alt}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
-                <div className="absolute top-4 left-4 bg-brand-black/90 backdrop-blur-sm text-brand-red font-mono text-xs px-2.5 py-1 rounded-sm border border-brand-border">
+                <div className="absolute top-4 left-4 bg-brand-black/90 backdrop-blur-sm text-brand-red font-sans text-xs font-semibold px-2.5 py-1 rounded-sm border border-brand-border">
                   {cls.index} · {cls.intensity}
                 </div>
               </div>
@@ -49,10 +49,10 @@ function Classes() {
               <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
                 <div>
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <span className="text-xs font-mono uppercase tracking-wider text-brand-red font-semibold">
+                    <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold">
                       {cls.category}
                     </span>
-                    <span className="text-xs font-mono text-brand-muted">
+                    <span className="text-xs font-sans text-brand-muted">
                       {cls.duration} · {cls.level}
                     </span>
                   </div>
@@ -61,19 +61,19 @@ function Classes() {
                     {cls.name}
                   </h3>
 
-                  <p className="text-brand-muted text-sm sm:text-base leading-relaxed mb-6">
+                  <p className="text-brand-body text-sm sm:text-base leading-relaxed mb-6">
                     {cls.description}
                   </p>
 
                   <div className="mb-6">
-                    <span className="text-xs font-mono uppercase tracking-wider text-brand-bone-muted block mb-2">
+                    <span className="text-xs font-sans uppercase tracking-wider text-brand-bone-muted font-medium block mb-2">
                       Key Focus Points:
                     </span>
                     <div className="flex flex-wrap gap-2">
                       {cls.keyPoints.map((pt) => (
                         <span
                           key={pt}
-                          className="text-xs bg-brand-dark border border-brand-border px-2.5 py-1 rounded-sm text-brand-bone-muted"
+                          className="text-xs bg-brand-dark border border-brand-border px-2.5 py-1 rounded-sm text-brand-bone-muted font-sans"
                         >
                           {pt}
                         </span>
@@ -83,7 +83,7 @@ function Classes() {
                 </div>
 
                 <div className="pt-4 border-t border-brand-border/60 flex flex-wrap items-center justify-between gap-4">
-                  <div className="text-xs font-mono text-brand-muted">
+                  <div className="text-xs font-sans text-brand-body">
                     Schedule: <span className="text-brand-bone font-medium">{cls.schedule}</span>
                   </div>
                   <Button
@@ -106,19 +106,21 @@ function Classes() {
           <SectionHeader
             eyebrow="Weekly Schedule"
             title="Floor & Class Timetable"
-            description="Morning, noon, and evening slots designed to fit busy professional schedules in Kigali."
+            description="Morning, noon, and evening slots designed to fit professional schedules in Kigali."
           />
 
           {/* Day selection tabs */}
-          <div className="flex flex-wrap gap-2 mb-8 border-b border-brand-border pb-4">
+          <div className="flex flex-wrap gap-2 mb-8 border-b border-brand-border pb-4" role="tablist" aria-label="Timetable days">
             {weeklyTimetable.map((dayObj) => (
               <button
                 key={dayObj.day}
                 type="button"
+                role="tab"
+                aria-selected={selectedDay === dayObj.day}
                 onClick={() => setSelectedDay(dayObj.day)}
-                className={`font-display uppercase tracking-wider text-sm px-4 py-2 rounded-sm transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand-red ${
+                className={`font-sans uppercase tracking-wider text-xs sm:text-sm font-semibold px-4 py-2 rounded-sm transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand-red cursor-pointer ${
                   selectedDay === dayObj.day
-                    ? 'bg-brand-red text-white font-semibold'
+                    ? 'bg-brand-red text-white'
                     : 'bg-brand-card text-brand-bone-muted hover:text-white hover:bg-brand-steel border border-brand-border'
                 }`}
               >
@@ -172,7 +174,7 @@ function Classes() {
           <h2 className="text-3xl font-display uppercase tracking-tight text-brand-bone">
             Not Sure Which Class Fits Your Goals?
           </h2>
-          <p className="text-sm text-brand-muted leading-relaxed">
+          <p className="text-sm text-brand-body leading-relaxed">
             Our coaches will assess your background on day one and guide you to the right sessions for your capacity.
           </p>
           <div className="pt-2">

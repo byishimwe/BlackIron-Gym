@@ -18,7 +18,7 @@ function Trainers() {
         <SectionHeader
           eyebrow="The Floor Staff"
           title="Meet The IMIZI Coaches"
-          description="Every coach at IMIZI holds active movement credentials and leads daily floor sessions."
+          description="Every coach at IMIZI leads daily floor sessions and provides real-time movement feedback."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
@@ -36,7 +36,7 @@ function Trainers() {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent pointer-events-none" />
-                <div className="absolute top-4 left-4 bg-brand-black/90 backdrop-blur-sm text-brand-bone text-[11px] font-mono px-2.5 py-1 rounded-sm border border-brand-border">
+                <div className="absolute top-4 left-4 bg-brand-black/90 backdrop-blur-sm text-brand-bone text-xs font-sans font-semibold px-2.5 py-1 rounded-sm border border-brand-border">
                   {trainer.credentials}
                 </div>
               </div>
@@ -45,7 +45,7 @@ function Trainers() {
               <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                 <div>
                   <div className="mb-4">
-                    <span className="text-xs font-mono uppercase tracking-widest text-brand-red font-semibold block mb-1">
+                    <span className="text-xs font-sans uppercase tracking-wider text-brand-red font-semibold block mb-1">
                       {trainer.role}
                     </span>
                     <h3 className="text-2xl sm:text-3xl font-display uppercase tracking-tight text-brand-bone">
@@ -53,13 +53,13 @@ function Trainers() {
                     </h3>
                   </div>
 
-                  <p className="text-brand-muted text-sm sm:text-base leading-relaxed mb-6">
+                  <p className="text-brand-body text-sm sm:text-base leading-relaxed mb-6">
                     {trainer.bio}
                   </p>
 
                   {/* Philosophy Quote */}
-                  <div className="border-l-2 border-brand-red pl-4 py-1 mb-6 bg-brand-dark/50 p-3 rounded-r-sm">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-brand-muted block mb-1">
+                  <div className="border-l-2 border-brand-red pl-4 py-2 mb-6 bg-brand-dark/50 rounded-r-sm">
+                    <span className="text-xs font-sans uppercase tracking-wider text-brand-muted block mb-1">
                       Coaching Philosophy:
                     </span>
                     <p className="text-xs sm:text-sm text-brand-bone-muted italic">
@@ -69,14 +69,14 @@ function Trainers() {
 
                   {/* Specialties */}
                   <div className="mb-6">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-brand-muted block mb-2">
+                    <span className="text-xs font-sans uppercase tracking-wider text-brand-muted block mb-2">
                       Core Specialties:
                     </span>
                     <div className="flex flex-wrap gap-2">
                       {trainer.specialties.map((spec) => (
                         <span
                           key={spec}
-                          className="text-xs bg-brand-dark border border-brand-border px-2.5 py-1 rounded-sm text-brand-bone-muted"
+                          className="text-xs bg-brand-dark border border-brand-border px-2.5 py-1 rounded-sm text-brand-bone-muted font-sans"
                         >
                           {spec}
                         </span>
@@ -86,7 +86,7 @@ function Trainers() {
                 </div>
 
                 <div className="pt-4 border-t border-brand-border/60 flex items-center justify-between">
-                  <span className="text-xs font-mono text-brand-muted">
+                  <span className="text-xs font-sans text-brand-body">
                     Floor Availability: Daily
                   </span>
                   <Button
@@ -109,14 +109,14 @@ function Trainers() {
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-brand-card border border-brand-border p-8 sm:p-12 rounded-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-3">
-              <span className="text-xs font-display uppercase tracking-widest text-brand-red font-semibold">
+              <span className="text-xs font-sans uppercase tracking-widest text-brand-red font-semibold">
                 1-on-1 Development
               </span>
               <h2 className="text-3xl sm:text-4xl font-display uppercase tracking-tight text-brand-bone">
                 Want Help Choosing The Right Coach?
               </h2>
-              <p className="text-brand-muted text-base leading-relaxed max-w-2xl">
-                Tell us about your current training routine, injury history, and schedule. We will match you with the coach whose technical background fits your exact goals.
+              <p className="text-brand-body text-base leading-relaxed max-w-2xl">
+                Tell us about your background, training history, and weekly availability. We will pair you with the coach whose technical focus matches your goals.
               </p>
             </div>
 

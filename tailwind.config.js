@@ -15,6 +15,7 @@ export default {
           border: '#333333',
           bone: '#F4F1EA',
           'bone-muted': '#DCD7CC',
+          body: '#B5B0A6',
           muted: '#8E8B82',
           red: '#B83A2E',
           'red-hover': '#9E2F24',
@@ -23,7 +24,7 @@ export default {
       },
       fontFamily: {
         display: ['Oswald', 'sans-serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Barlow', 'system-ui', '-apple-system', 'sans-serif'],
       },
       maxWidth: {
         content: '1320px',

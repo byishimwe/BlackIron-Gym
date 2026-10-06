@@ -8,7 +8,7 @@
     color-scheme: dark;
     background-color: #0D0D0D;
     color: #F4F1EA;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Barlow', system-ui, -apple-system, sans-serif;
   }
 
   body {
@@ -16,7 +16,6 @@
     background-color: #0D0D0D;
     color: #F4F1EA;
     min-height: 100vh;
-    overflow-x: hidden;
   }
 
   /* Accessible focus states across interactive elements */
@@ -25,10 +24,16 @@
     outline-offset: 3px;
   }
 
-  /* Clean headings default to display font */
-  h1, h2, h3, h4, h5, h6 {
+  /* Display headings restricted to 500/600 weight */
+  h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  h4, h5, h6 {
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 0.01em;
     font-weight: 600;
   }
 }

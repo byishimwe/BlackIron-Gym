@@ -13,7 +13,7 @@ function Button({
   ...props
 }) {
   const baseStyles =
-    'inline-flex items-center justify-center font-display uppercase tracking-wider font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer select-none';
+    'inline-flex items-center justify-center font-sans uppercase tracking-wider font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer select-none';
 
   const sizeStyles = {
     sm: 'text-xs px-3.5 py-1.5 rounded-sm',
