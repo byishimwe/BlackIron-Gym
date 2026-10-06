@@ -27,7 +27,7 @@ class ErrorBoundary extends React.Component {
             Something went wrong
           </h1>
           <p className="text-brand-muted max-w-md mb-6">
-            An unexpected error occurred. Please refresh the page to return to BlackIron Gym.
+            An unexpected error occurred. Please refresh the page to return to IMIZI Training Club.
           </p>
           <button
             onClick={() => window.location.reload()}

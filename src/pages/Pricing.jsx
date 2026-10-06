@@ -190,7 +190,7 @@ function Pricing() {
         <SectionHeader
           eyebrow="Answers"
           title="Common Questions"
-          description="Everything you need to know about getting started at BlackIron."
+          description="Everything you need to know about getting started at IMIZI."
         />
 
         <div className="max-w-3xl space-y-4">

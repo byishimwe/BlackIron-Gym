@@ -66,21 +66,21 @@ function Header() {
           <Link
             to="/"
             className="flex items-center gap-3.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red rounded-sm"
-            aria-label="BlackIron Gym — Return to homepage"
+            aria-label="IMIZI Training Club — Return to homepage"
           >
             <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded bg-brand-dark border border-brand-border flex items-center justify-center overflow-hidden p-1 transition-transform group-hover:scale-105">
               <img
                 src="/Logo.png"
-                alt="BlackIron Crest"
+                alt="IMIZI Logo"
                 className="w-full h-full object-contain filter drop-shadow"
               />
             </div>
             <div className="flex flex-col">
               <span className="font-display uppercase tracking-wider font-bold text-lg sm:text-xl text-brand-bone leading-none">
-                BlackIron
+                IMIZI
               </span>
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-widest text-brand-muted uppercase leading-tight mt-0.5">
-                Strength · Kigali
+              <span className="text-[10px] sm:text-[11px] font-sans italic tracking-[0.22em] text-brand-muted uppercase leading-tight mt-0.5">
+                Training Club
               </span>
             </div>
           </Link>

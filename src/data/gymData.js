@@ -13,7 +13,7 @@ export const corePillars = [
     description:
       "No gimmicks or overcrowding. Olympic lifting platforms, heavy dumbbell runs up to 50kg, precision cable setups, and a 25-meter turf lane built for genuine athletic output.",
     image: "/Intro1.webp",
-    alt: "Athletes training with barbells on the BlackIron gym floor",
+    alt: "Athletes training with barbells on the IMIZI training floor",
     highlights: ["Olympic platforms & calibrated plates", "Dedicated turf lane for sled work", "Free weight capacity up to 50kg"],
   },
   {
@@ -55,9 +55,9 @@ export const classesData = [
     keyPoints: ["Compound barbell lifts", "Progressive overload tracking", "Individualized load coaching"],
   },
   {
-    id: "iron-conditioning",
+    id: "imizi-conditioning",
     index: "02",
-    name: "Iron Conditioning",
+    name: "IMIZI Conditioning",
     category: "High-Intensity Capacity",
     duration: "45 min",
     intensity: "High Capacity",
@@ -130,10 +130,10 @@ export const weeklyTimetable = [
   {
     day: "Tuesday",
     slots: [
-      { time: "06:30 – 07:15", name: "Iron Conditioning", coach: "Diane U." },
+      { time: "06:30 – 07:15", name: "IMIZI Conditioning", coach: "Diane U." },
       { time: "07:30 – 08:20", name: "Mobility & Resilience", coach: "Eric M." },
       { time: "12:00 – 12:45", name: "Strength Fundamentals", coach: "Marcus K." },
-      { time: "17:30 – 18:15", name: "Iron Conditioning", coach: "Diane U." },
+      { time: "17:30 – 18:15", name: "IMIZI Conditioning", coach: "Diane U." },
       { time: "18:30 – 19:30", name: "Open Floor (Coach Supported)", coach: "Aline M." },
     ],
   },
@@ -150,9 +150,9 @@ export const weeklyTimetable = [
   {
     day: "Thursday",
     slots: [
-      { time: "06:30 – 07:15", name: "Iron Conditioning", coach: "Diane U." },
+      { time: "06:30 – 07:15", name: "IMIZI Conditioning", coach: "Diane U." },
       { time: "07:30 – 08:20", name: "Mobility & Resilience", coach: "Eric M." },
-      { time: "17:30 – 18:15", name: "Iron Conditioning", coach: "Diane U." },
+      { time: "17:30 – 18:15", name: "IMIZI Conditioning", coach: "Diane U." },
       { time: "18:30 – 19:30", name: "Strength Fundamentals", coach: "Marcus K." },
     ],
   },
@@ -162,7 +162,7 @@ export const weeklyTimetable = [
       { time: "06:00 – 07:00", name: "Strength Lab", coach: "Marcus K." },
       { time: "07:15 – 08:00", name: "Engine & Turf", coach: "Aline M." },
       { time: "17:00 – 18:00", name: "Friday Heavy Hitters", coach: "Marcus K." },
-      { time: "18:15 – 19:15", name: "Iron Conditioning", coach: "Diane U." },
+      { time: "18:15 – 19:15", name: "IMIZI Conditioning", coach: "Diane U." },
     ],
   },
   {
@@ -270,7 +270,7 @@ export const pricingPlans = [
       "Monthly 1-on-1 coaching progress check-in",
       "Priority registration for Saturday Team sessions",
       "2 complimentary guest day passes every month",
-      "Locker service & BlackIron training towel",
+      "Locker service & IMIZI training towel",
     ],
     ctaText: "Join Unlimited",
     href: "/contact?plan=unlimited",
@@ -302,7 +302,7 @@ export const pricingFaqs = [
 
 export const featuredTestimonial = {
   quote:
-    "BlackIron isn't the kind of gym with rows of TVs and people staring at their phones. You walk onto the floor, the coaches know your name and your numbers, and the work gets done. It transformed how I train in Kigali.",
+    "IMIZI isn't the kind of gym with rows of TVs and people staring at their phones. You walk onto the floor, the coaches know your name and your numbers, and the work gets done. It transformed how I train in Kigali.",
   author: "Christian Nkurunziza",
   role: "Member for 2 years · Recreational Powerlifter",
   city: "Kigali",

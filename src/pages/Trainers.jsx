@@ -17,8 +17,8 @@ function Trainers() {
       <section className="py-20 max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="The Floor Staff"
-          title="Meet The BlackIron Coaches"
-          description="Every coach at BlackIron holds active movement credentials and leads daily floor sessions."
+          title="Meet The IMIZI Coaches"
+          description="Every coach at IMIZI holds active movement credentials and leads daily floor sessions."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">

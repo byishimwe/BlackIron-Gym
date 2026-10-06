@@ -1,8 +1,23 @@
-# React + Vite
+# IMIZI Training Club
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Strength starts at the roots.**
 
-Currently, two official plugins are available:
+IMIZI Training Club is Kigali's premier strength and conditioning training facility. Built around foundations, stability, consistency, and growth from the ground up.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Brand Identity
+- **Full Brand Name**: IMIZI Training Club
+- **Short Form**: IMIZI
+- **Tagline**: Strength starts at the roots.
+- **Philosophy**: Real physical development built from the ground up—moving beyond surface-level gym aesthetics into disciplined movement, stability, and athletic longevity.
+
+## Tech Stack
+- React 19 + Vite
+- Tailwind CSS
+- React Router 7
+- Framer Motion
+
+## Development
+```bash
+npm install
+npm run dev
+```

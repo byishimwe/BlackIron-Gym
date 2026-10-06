@@ -12,22 +12,28 @@ function Footer() {
             <Link
               to="/"
               className="inline-flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red rounded-sm"
-              aria-label="BlackIron Gym homepage"
+              aria-label="IMIZI Training Club homepage"
             >
               <div className="w-10 h-10 rounded bg-brand-dark border border-brand-border flex items-center justify-center p-1">
                 <img
                   src="/Logo.png"
-                  alt="BlackIron Crest"
+                  alt="IMIZI Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="font-display uppercase tracking-wider font-bold text-2xl text-brand-bone">
-                BlackIron Gym
-              </span>
+              <div className="flex flex-col">
+                <span className="font-display uppercase tracking-wider font-bold text-xl text-brand-bone leading-none">
+                  IMIZI
+                </span>
+                <span className="text-[10px] font-sans italic tracking-[0.22em] text-brand-muted uppercase leading-tight mt-0.5">
+                  Training Club
+                </span>
+              </div>
             </Link>
 
             <p className="text-sm text-brand-muted max-w-sm leading-relaxed">
-              Built for the work. A focused training facility in Kigali dedicated to disciplined strength, conditioning, and structured athletic coaching.
+              <strong className="text-brand-bone block mb-1">Strength starts at the roots.</strong>
+              A focused training club in Kigali dedicated to foundations, stability, consistency, and strength built from the ground up.
             </p>
 
             <div className="pt-2">
@@ -114,7 +120,7 @@ function Footer() {
         {/* Bottom bar with honest portfolio note */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-muted">
           <div>
-            &copy; {currentYear} BlackIron Gym. All rights reserved.
+            &copy; {currentYear} IMIZI Training Club. All rights reserved.
           </div>
           <div className="text-center sm:text-right font-mono text-[11px] text-brand-muted/80">
             Portfolio concept project · Built with React & Tailwind

@@ -54,8 +54,8 @@ function About() {
       {/* Editorial Page Hero */}
       <PageHero
         eyebrow="Who We Are"
-        title="A Gym Built Around The Work"
-        description="BlackIron Gym was founded in Kigali on a simple premise: training should be focused, well-coached, and free from fitness industry nonsense."
+        title="Strength Starts At The Roots"
+        description="IMIZI was founded in Kigali on an honest principle: lasting physical development requires foundations, stability, consistency, and strength built from the ground up."
       />
 
       {/* 1. EDITORIAL STORY / PHILOSOPHY */}
@@ -66,19 +66,19 @@ function About() {
               The Philosophy
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display uppercase tracking-tight text-brand-bone leading-tight">
-              We Didn&apos;t Build A Spa.
+              Beyond Hard Aesthetics.
               <br />
-              We Built A Training Ground.
+              Built From The Roots Up.
             </h2>
             <div className="space-y-4 text-brand-muted text-base sm:text-lg leading-relaxed">
               <p>
-                Too many modern gyms feel like nightclubs or corporate lounges. The equipment is chosen for aesthetics rather than athletic utility, and coaching is reduced to motivational cheerleading.
+                Too many fitness spaces trade on pure hype or aggressive aesthetics without substance. The equipment is picked for show, and coaching is reduced to motivational noise.
               </p>
               <p>
-                BlackIron was built to restore seriousness to physical preparation. We believe that long-term strength, cardiovascular engine, and joint durability come from disciplined execution of fundamental movements over months and years.
+                IMIZI was created to give physical training an enduring foundation. In Kinyarwanda, <em>imizi</em> means roots—and strength starts at the roots. We believe that long-term strength, joint durability, and cardiovascular capacity come from disciplined execution of fundamental movements over months and years.
               </p>
               <p>
-                Whether you have never touched a barbell or you have been training for over a decade, you will receive real coaching, clear progressions, and an atmosphere that demands your best.
+                Whether you have never touched a barbell or you have been training for over a decade, you will receive real coaching, clear progressions, and an atmosphere that nurtures genuine growth.
               </p>
             </div>
           </div>
@@ -87,14 +87,14 @@ function About() {
             <div className="relative aspect-[4/3] rounded-sm overflow-hidden bg-brand-card border border-brand-border">
               <img
                 src="/wcu1.jpg"
-                alt="BlackIron training floor with barbells and racks"
+                alt="IMIZI training floor with barbells and racks"
                 className="w-full h-full object-cover filter contrast-105"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-6 left-6 right-6">
                 <span className="text-xs font-mono uppercase text-brand-red font-semibold block">Kigali, Rwanda</span>
-                <p className="font-display uppercase text-lg text-brand-bone">Designed for athletic longevity</p>
+                <p className="font-display uppercase text-lg text-brand-bone">Foundations & athletic longevity</p>
               </div>
             </div>
           </div>

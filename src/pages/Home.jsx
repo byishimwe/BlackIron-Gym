@@ -14,7 +14,7 @@ function Home() {
         <div className="absolute inset-0 z-0">
           <img
             src="/Hero.jpg"
-            alt="Athlete preparing barbell for heavy lift at BlackIron Gym"
+            alt="Athlete preparing barbell for heavy lift at IMIZI Training Club"
             className="w-full h-full object-cover object-center filter brightness-65 contrast-110"
             fetchPriority="high"
           />
@@ -28,19 +28,19 @@ function Home() {
             <div className="inline-flex items-center gap-2.5 px-3 py-1 bg-brand-black/90 backdrop-blur-md border border-brand-red/50 rounded-sm mb-6">
               <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
               <span className="text-xs sm:text-sm font-display uppercase tracking-widest text-brand-bone font-semibold">
-                Strength · Conditioning · Kigali
+                IMIZI Training Club · Kigali
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display uppercase tracking-tight leading-[0.92] mb-6 text-left break-words">
-              <span className="text-brand-bone block">Strength isn&apos;t given.</span>
-              <span className="text-brand-red block">It&apos;s built.</span>
+              <span className="text-brand-bone block">Strength starts</span>
+              <span className="text-brand-red block">at the roots.</span>
             </h1>
 
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg lg:text-xl text-brand-bone-muted/90 max-w-xl leading-relaxed mb-8">
-              A focused training floor, coaches who pay attention, and a room of people who show up every single day.
+              Foundations, stability, consistency, and growth. We build resilient strength from the ground up with structured coaching and a room of people who show up every day.
             </p>
 
             {/* Twin Strategic CTAs */}
@@ -80,12 +80,12 @@ function Home() {
         </div>
       </section>
 
-      {/* 3. CORE EXPERIENCE / WHAT MAKES BLACKIRON DIFFERENT */}
+      {/* 3. CORE EXPERIENCE / WHAT MAKES IMIZI DIFFERENT */}
       <section className="py-20 lg:py-28 max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="The Standard"
-          title="Built For Real Physical Work"
-          description="We stripped away the gimmicks and built the gym we wanted to train in: serious equipment, uncompromising coaching standards, and zero pretension."
+          eyebrow="The Foundation"
+          title="Strength Built From The Ground Up"
+          description="Beyond the hard gym aesthetic: we focus on foundations, stability, consistency, and genuine physical growth with serious equipment and uncompromising coaching."
         />
 
         <div className="space-y-16 lg:space-y-24">

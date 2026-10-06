@@ -113,7 +113,7 @@ function Contact() {
                   Training Ground Location
                 </span>
                 <h3 className="text-xl font-display uppercase tracking-tight text-brand-bone mb-1">
-                  BlackIron Gym Kigali
+                  IMIZI Training Club Kigali
                 </h3>
                 <p className="text-sm text-brand-muted leading-relaxed">
                   KG 563 St, Kimihurura Sector, Gasabo District
@@ -153,7 +153,7 @@ function Contact() {
                 </span>
                 <div className="space-y-1.5 text-sm text-brand-muted">
                   <p>
-                    <strong className="text-brand-bone-muted">Email:</strong> floor@blackirongym.demo
+                    <strong className="text-brand-bone-muted">Email:</strong> floor@imizi.demo
                   </p>
                   <p>
                     <strong className="text-brand-bone-muted">Reception:</strong> +250 788 000 000
