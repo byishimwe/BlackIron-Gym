@@ -2,104 +2,134 @@
 
 > **Strength starts at the roots.**
 
-IMIZI Training Club is an independent, portfolio-grade website for a strength and conditioning facility concept set in Kimihurura, Kigali, Rwanda. The brand identity is grounded in foundations, stability, consistency, and athletic longevity built from the ground up.
+A responsive multi-page website concept for **IMIZI Training Club**, a Kigali strength and conditioning brand, built with React, Vite, Tailwind CSS, and React Router.
 
-*This project is an independent frontend design and engineering showcase demonstrating clean architecture, strict accessibility standards, and deliberate typography.*
+IMIZI is an independent frontend design and engineering portfolio project set in Kimihurura, Kigali, Rwanda. The concept is built around disciplined training, strong foundations, coach-led structure, accessibility, and a restrained athletic editorial identity.
+
+## Repository
+
+- **Repository**: `byishimwe/imizi-training-club`
+- **Project Type**: Responsive multi-page business website concept
+- **Location Setting**: Kimihurura · Kigali, Rwanda
+- **Topics**: `react`, `vite`, `tailwindcss`, `react-router`, `responsive-design`, `web-design`, `frontend-development`, `accessibility`, `fitness`, `gym-website`, `portfolio-project`
 
 ---
 
 ## Brand & Design System
 
-- **Brand Name**: IMIZI Training Club (Short: IMIZI)
+- **Brand Name**: IMIZI Training Club
+- **Short Form**: IMIZI
 - **Tagline**: *Strength starts at the roots.*
-- **Location Setting**: Kimihurura · Kigali, Rwanda
 - **Aesthetic**: Dark athletic editorial, near-black foundation, warm bone typography, restrained iron-red accent, square geometry, and subtle structural grid lines.
 
 ### Color Palette
-- **Brand Black**: `#0D0D0D` (Foundation background)
-- **Brand Dark**: `#141414` (Surface sections)
-- **Brand Card**: `#1B1B1B` (Structural containers)
-- **Brand Border**: `#333333` (Dividers & structural strokes)
-- **Brand Bone**: `#F4F1EA` (Primary display text & titles)
-- **Brand Body**: `#B5B0A6` (High-contrast supporting paragraph text)
-- **Brand Muted**: `#8E8B82` (Secondary captions & subtle metadata)
-- **Brand Red**: `#B83A2E` (Restrained focal accent & interactive highlights)
+
+- **Brand Black**: `#0D0D0D` — foundation background
+- **Brand Dark**: `#141414` — surface sections
+- **Brand Card**: `#1B1B1B` — structural containers
+- **Brand Border**: `#333333` — dividers and structural strokes
+- **Brand Bone**: `#F4F1EA` — primary display text and titles
+- **Brand Body**: `#B5B0A6` — supporting paragraph text
+- **Brand Muted**: `#8E8B82` — secondary captions and subtle metadata
+- **Brand Red**: `#B83A2E` — focal accent and interactive highlights
 
 ### Typography
-- **Display Headings**: [Oswald](https://fonts.google.com/specimen/Oswald) (weights 500 & 600) — condensed, disciplined, athletic impact.
-- **Body & UI**: [Barlow](https://fonts.google.com/specimen/Barlow) (weights 400, 500, & 600) — legible, industrial, human grotesque.
+
+- **Display Headings**: [Oswald](https://fonts.google.com/specimen/Oswald) — weights 500 and 600
+- **Body & UI**: [Barlow](https://fonts.google.com/specimen/Barlow) — weights 400, 500, and 600
 
 ---
 
 ## Route Architecture
 
-| Route | Page | Purpose & Content |
+| Route | Page | Purpose |
 |---|---|---|
-| `/` | **Home** | Editorial hero, proof metrics strip, 3 core pillars (Floor, Standard, Culture), discipline preview, and trial booking CTA. |
-| `/about` | **About** | The gym's foundational philosophy, 850m² floor specification grid, equipment highlights, and four floor conduct standards. |
-| `/classes` | **Classes** | Five structured training disciplines with duration, intensity, progressive level tags, and complete Monday–Sunday timetable. |
-| `/trainers` | **Coaches** | Dedicated roster of four certified coaches covering strength mechanics, work capacity, mobility, and beginner athletic integration. |
-| `/pricing` | **Memberships** | Clear pricing in Rwandan Francs (RWF), Day Pass, Standard, and Performance Unlimited plans, plus an accessible FAQ accordion. |
-| `/contact` | **Visit & Trial** | Facility location, operational floor hours, illustrative direct reach info, first-visit guide, and an accessible booking form. |
-| `*` | **404 Not Found** | Custom off-the-floor error screen with swift navigation recovery. |
+| `/` | **Home** | Editorial hero, proof strip, core training pillars, featured disciplines, and trial inquiry CTA. |
+| `/about` | **About** | Training philosophy, facility specification, equipment highlights, and floor standards. |
+| `/classes` | **Classes** | Five structured training disciplines and a complete Monday–Sunday interactive timetable. |
+| `/trainers` | **Coaches** | Four fictional coach profiles covering strength, conditioning, mobility, and group training. |
+| `/pricing` | **Memberships** | Illustrative RWF pricing for Day Pass, Standard, and Performance Unlimited plans, plus an accessible FAQ. |
+| `/contact` | **Visit & Trial** | Illustrative location and contact details, first-visit information, and an accessible demo inquiry form. |
+| `*` | **404 Not Found** | Custom fallback route with navigation recovery. |
 
 ---
 
 ## Tech Stack
 
-- **React 19** (`react`, `react-dom`)
-- **Vite 6** (Fast HMR & modern bundling)
-- **React Router 7** (`react-router-dom` client-side SPA routing)
-- **Tailwind CSS 3** (Custom design tokens, accessible focus rings, and responsive utilities)
-- **ESLint 9** (Rigorous React & JavaScript linting rules)
+- **React 19**
+- **Vite 6**
+- **React Router 7**
+- **Tailwind CSS 3**
+- **ESLint 9**
 
-*Zero heavy animation frameworks or extraneous CSS libraries. Pure, optimized React and utility CSS.*
+The project intentionally avoids heavy animation or UI frameworks, keeping the implementation focused on React, responsive layout, typography, accessibility, and interaction quality.
 
 ---
 
-## Accessibility & Performance Features
+## Highlights
 
-- **Semantic HTML**: Landmarks (`<header>`, `<main>`, `<nav>`, `<section>`, `<footer>`), structured heading levels (`<h1>`–`<h3>`), and definition lists.
-- **Form Accessibility**: Inputs include explicit `<label>` bindings, `aria-invalid`, and `aria-describedby` connected to error announcements.
-- **Keyboard Navigation**: Universal high-contrast `:focus-visible` focus rings, Escape-key dismissal for the mobile navigation drawer, and focus restoration to the trigger button upon close.
-- **Decorative Images**: Branded SVG and logo links use `alt=""` and `aria-hidden="true"` inside named links to eliminate redundant screen reader announcements.
-- **Motion Preferences**: Respects `prefers-reduced-motion: reduce` across all transitions and smooth scrolls.
-- **Portfolio Honesty**: The intake form features an in-browser validation and demonstration capture state with explicit notices that no private user data is transmitted or retained.
+- Responsive multi-page architecture
+- Reusable design-system components
+- Interactive seven-day class timetable
+- Membership and pricing presentation in RWF
+- Accessible inquiry form validation with honest demo states
+- Responsive mobile navigation
+- Route-aware document titles and custom 404 handling
+- `prefers-reduced-motion` support
+- Portfolio-safe fictional business details
+- Deliberate Oswald + Barlow typography system
+
+---
+
+## Accessibility & Interaction
+
+- Semantic page landmarks and structured heading hierarchy
+- Explicit form labels with `aria-invalid` and `aria-describedby` error relationships
+- Visible high-contrast `:focus-visible` states
+- Escape-key dismissal and focus restoration for mobile navigation
+- Decorative logo imagery hidden from redundant screen-reader announcement
+- Reduced-motion support across transitions and smooth scrolling
+- Demo form behavior that does not transmit or persist user submissions
 
 ---
 
 ## Local Development
 
 ### Prerequisites
-- Node.js (v18 or higher recommended)
+
+- Node.js 18+
 - npm
 
 ### Installation
+
 ```bash
-# Clone the repository
-git clone https://github.com/byishimwe/BlackIron-Gym.git
-
-# Enter the project directory
-cd BlackIron-Gym
-
-# Install dependencies
+git clone https://github.com/byishimwe/imizi-training-club.git
+cd imizi-training-club
 npm install
 ```
 
-### Running Locally
+### Development Server
+
 ```bash
 npm run dev
 ```
-Open your browser at `http://localhost:5173`.
+
+Open `http://localhost:5173` in your browser.
 
 ### Production Build
+
 ```bash
 npm run build
 ```
-Creates an optimized static production bundle in `dist/`.
 
-### Code Quality / Linting
+### Lint
+
 ```bash
 npm run lint
 ```
-Runs ESLint across all codebase files.
+
+---
+
+## Portfolio Note
+
+IMIZI Training Club is a fictional business concept created for portfolio presentation. The brand, coaches, memberships, pricing, contact information, operating details, and form interactions are illustrative and do not represent a real operating gym.
